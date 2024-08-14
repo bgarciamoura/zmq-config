@@ -47,6 +47,16 @@ config LV_Z_VDB_SIZE
 
 #config LV_Z_DPI
 #	default 148
+#
+if ZMK_BACKLIGHT
+
+config PWM
+    default y
+
+config LED_PWM
+    default y
+
+endif # ZMK_BACKLIGHT
 
 config LV_Z_BITS_PER_PIXEL
 	default 1
