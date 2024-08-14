@@ -48,6 +48,7 @@
         b-gpios = <&pro_micro 21 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         steps = <80>;
         status = "disabled";
+        label = "LEFT_ENCODER";
     };
 
     right_encoder: encoder_right {
@@ -56,7 +57,8 @@
         b-gpios = <&pro_micro 21 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         steps = <80>;
         status = "disabled";
-    };
+        label = "RIGHT_ENCODER";
+  };
 
     sensors {
         compatible = "zmk,keymap-sensors";
