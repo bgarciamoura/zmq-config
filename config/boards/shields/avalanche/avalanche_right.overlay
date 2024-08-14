@@ -1,4 +1,4 @@
-#include "avalanche.dtsi"
+#include "avalanche.dts"
 
 &default_transform { 
     col-offset = <7>;
