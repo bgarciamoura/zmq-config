@@ -46,7 +46,7 @@
         compatible = "alps,ec11";
         a-gpios = <&pro_micro 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         b-gpios = <&pro_micro 21 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        steps = <80>;
+        resolution = <4>; 
         status = "disabled";
         label = "LEFT_ENCODER";
     };
@@ -55,7 +55,7 @@
         compatible = "alps,ec11";
         a-gpios = <&pro_micro 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         b-gpios = <&pro_micro 21 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        steps = <80>;
+        resolution = <4>;
         status = "disabled";
         label = "RIGHT_ENCODER";
   };
@@ -65,7 +65,5 @@
         sensors = <&left_encoder &right_encoder>;
         triggers-per-rotation = <20>;
   };
-
-
 };
 
