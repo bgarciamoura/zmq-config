@@ -1,4 +1,4 @@
-file_format: "1"
+file_format: '1'
 id: avalanche
 name: Avalanche V4
 type: shield
@@ -9,5 +9,6 @@ features:
   - keys
   - display
   - encoder
+  - backlight
 siblings:
   - avalanche_v4_left
