@@ -56,12 +56,16 @@
 
         NAVIGATION {
             bindings = <
-&trans  &trans    &trans    &trans    &trans     &trans                  &trans  &trans           &trans             &trans        &trans         &trans
-&trans  &kp HOME  &kp UP    &kp END   &trans     &trans                  &trans  &kp HOME         &trans             &kp END       &trans         &trans
-&trans  &trans    &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &trans                  &kp K_SCROLL_UP  &kp LA(LEFT)       &kp UP_ARROW  &kp LA(RIGHT)  &kp PAGE_UP  &trans         &trans
-&trans  &trans    &trans    &trans    &trans     &trans  &trans  &trans  &trans  &trans           &kp K_SCROLL_DOWN  &kp LEFT      &kp DOWN       &kp RIGHT    &kp PAGE_DOWN  &trans
+&trans  &trans    &trans    &trans    &trans     &trans                  &trans  &trans           &trans             &trans        &trans    &trans
+&trans  &kp HOME  &kp UP    &kp END   &trans     &trans                  &trans  &kp HOME         &trans             &kp END       &trans    &trans
+&trans  &trans    &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &trans                  &kp K_SCROLL_UP  &kp LA(LEFT)       &kp UP_ARROW  &kp A     &kp PAGE_UP  &trans         &trans
+&trans  &trans    &trans    &trans    &trans     &trans  &trans  &trans  &trans  &trans           &kp K_SCROLL_DOWN  &kp LEFT      &kp DOWN  &kp RIGHT    &kp PAGE_DOWN  &trans
         &trans    &trans    &trans    &trans     &trans                  &trans  &trans           &trans             &trans        &trans
             >;
+
+            sensor-bindings =
+                <&inc_dec_kp C_BRIGHTNESS_INC C_BRIGHTNESS_DEC>,
+                <&inc_dec_kp PAGE_UP PAGE_DOWN>;
         };
 
         SYMBOLS {
