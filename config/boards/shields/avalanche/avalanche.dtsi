@@ -16,7 +16,7 @@
     };
 };
 
-&spi3 {
+&backlight {
   status = "okay";
   pinctrl-0 = <&spi3_default>;
   pinctrl-1 = <&spi3_sleep>;
@@ -47,7 +47,7 @@
         zephyr,display = &oled;
         zmk,kscan = &kscan0;
         zmk,matrix_transform = &default_transform;
-        // zmk,backlight = &backlight;
+        zmk,backlight = &backlight;
     };
 
     default_transform: keymap_transform_0 {
@@ -105,6 +105,13 @@
     sensors {
         compatible = "zmk,keymap-sensors";
         sensors = <&left_encoder &right_encoder>;
+    };
+
+    backlight: pwmleds {
+        compatible = "pwm-leds";
+        pwm_led_0 {
+            pwms = <&pro_micro 0 (PWM_POLARITY_NORMAL)>;
+        };
     };
 };
 
