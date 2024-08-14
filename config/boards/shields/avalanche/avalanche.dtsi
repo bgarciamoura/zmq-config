@@ -1,5 +1,6 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 #include <dt-bindings/led/led.h>
+#include <zephyr/dt-bindings/pwm/pwm.h>
 
 &pinctrl {
     spi3_default: spi3_default {
@@ -36,7 +37,7 @@
 
   led_strip: ws2812@0 {
     compatible = "worldsemi,ws2812-spi";
-    label = "WS2812";
+    // label = "WS2812"/* ; */
 
     /* SPI */
     reg = <0>;
@@ -141,7 +142,7 @@
     oled: ssd1306@3c {
         compatible = "solomon,ssd1306fb";
         reg = <0x3c>;
-        label = "DISPLAY";
+        // label = "DISPLAY";
         width = <128>;
         height = <64>;
         segment-offset = <0>;
