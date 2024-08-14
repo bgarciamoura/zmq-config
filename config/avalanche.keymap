@@ -46,12 +46,22 @@
             bindings = <
 &kp GRAVE         &kp N1        &kp N2    &kp N3                          &kp N4          &kp N5                         &kp N6     &kp N7                 &kp N8     &kp N9  &kp N0     &kp MINUS
 &kp TAB           &kp Q         &kp W     &kp E                           &kp R           &kp T                          &kp Y      &kp U                  &kp I      &kp O   &kp P      &kp LEFT_BRACKET
-&kp ESC           &kp LEFT_ALT  &kp A     &kp S                           &kp D           &kp F      &kp G                          &kp H                  &kp J      &kp K   &kp L      &kp SEMICOLON     &kp RIGHT_BRACKET  &kp NON_US_BACKSLASH
-&kp LEFT_CONTROL  &kp Z         &kp X     &kp C                           &kp V           &kp B      &kp DELETE  &trans  &trans     &kp BACKSPACE          &kp N      &kp M   &kp COMMA  &kp PERIOD        &lt 1 SLASH        &kp SQT
-                  &kp LGUI      &kp CAPS  &hm LA(LC(LS(LEFT_GUI))) SPACE  &kp LEFT_SHIFT  &kp ENTER                      &kp ENTER  &hm RIGHT_SHIFT EQUAL  &kp SPACE  &mo 1   &mo 2
+&kp ESC           &kp LEFT_ALT  &kp A     &kp S                           &kp D           &kp F      &kp G                          &kp H                  &kp J      &kp K   &kp L      &kp SEMICOLON     &kp RIGHT_BRACKET  &kp BACKSLASH
+&kp LEFT_CONTROL  &kp Z         &kp X     &kp C                           &kp V           &kp B      &kp DELETE  &trans  &trans     &kp BACKSPACE          &kp N      &kp M   &kp COMMA  &kp PERIOD        &lt 2 SLASH        &kp SQT
+                  &kp LGUI      &kp CAPS  &hm LA(LC(LS(LEFT_GUI))) SPACE  &kp LEFT_SHIFT  &kp ENTER                      &kp ENTER  &hm RIGHT_SHIFT EQUAL  &kp SPACE  &mo 2   &mo 1
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+        };
+
+        NAVIGATION {
+            bindings = <
+&trans  &trans    &trans    &trans    &trans     &trans                  &trans  &trans           &trans             &trans        &trans         &trans
+&trans  &kp HOME  &kp UP    &kp END   &trans     &trans                  &trans  &kp HOME         &trans             &kp END       &trans         &trans
+&trans  &trans    &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &trans                  &kp K_SCROLL_UP  &kp LA(LEFT)       &kp UP_ARROW  &kp LA(RIGHT)  &kp PAGE_UP  &trans         &trans
+&trans  &trans    &trans    &trans    &trans     &trans  &trans  &trans  &trans  &trans           &kp K_SCROLL_DOWN  &kp LEFT      &kp DOWN       &kp RIGHT    &kp PAGE_DOWN  &trans
+        &trans    &trans    &trans    &trans     &trans                  &trans  &trans           &trans             &trans        &trans
+            >;
         };
 
         SYMBOLS {
@@ -61,16 +71,6 @@
 &trans  &trans  &kp LCTRL  &kp LALT  &kp LGUI  &kp LSHIFT  &trans                  &trans  &kp RSHIFT  &kp RGUI  &kp RALT  &kp RCTRL      &trans  &trans
 &trans  &trans  &trans     &trans    &trans    &trans      &trans  &trans  &trans  &trans  &trans      &trans    &trans    &trans         &trans  &trans
         &trans  &trans     &trans    &trans    &trans                      &trans  &trans  &trans      &trans    &trans
-            >;
-        };
-
-        NAVIGATION {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans           &trans             &trans        &trans         &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &kp HOME         &trans             &kp END       &trans         &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                  &kp K_SCROLL_UP  &kp LA(LEFT)       &kp UP_ARROW  &kp LA(RIGHT)  &kp PAGE_UP  &trans         &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans           &kp K_SCROLL_DOWN  &kp LEFT      &kp DOWN       &kp RIGHT    &kp PAGE_DOWN  &trans
-        &trans  &trans  &trans  &trans  &trans                  &trans  &trans           &trans             &trans        &trans
             >;
         };
 
